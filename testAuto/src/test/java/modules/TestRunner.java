@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty","json:target/json/results.json"},
         features = {"classpath:features"},
         glue = {"modules","stepDefinition"},
-        tags = "@api "
+        tags = "@smoke"
 
 )
 public class TestRunner {

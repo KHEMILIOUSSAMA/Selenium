@@ -34,6 +34,14 @@ public class Hooks {
 
        PageFactory.initElements(driver, googleSearchPageObject);
    }
+    public static void addDelay() {
+        try {
+            Thread.sleep(2000); // Attendre 2 secondes
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Réinitialiser l'état interrompu
+        }
+    }
+
    @After
     public void TearDown() {
        driver.quit();

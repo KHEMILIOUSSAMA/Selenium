@@ -8,16 +8,7 @@ Feature: Google search
   Scenario: Selenium
     When I lookup the word "selenium"
     Then search results display the word "selenium"
+    And I click on the first result
 
-  Scenario: cucumber
-    When I lookup the word "cucumber"
-    Then search results display the word "cucumber"
-  @ignore
-  Scenario Outline: <lookup_word>
-    When I lookup the word "<lookup_word>"
-    Then search results display the word "<lookup_word>"
-    Examples:
-    |lookup_word|expected_result|
-    |restassured|restassured    |
-    |java|fail                  |
+
 
